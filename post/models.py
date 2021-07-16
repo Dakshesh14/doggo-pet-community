@@ -36,7 +36,7 @@ class Post(models.Model):
     title = models.CharField(max_length=225)
     content = models.TextField(max_length=2400)
 
-    image = models.ImageField(upload_to="post_image")
+    image = models.URLField()
 
     posted_on = models.DateTimeField(auto_now_add=True)
     likes = models.ManyToManyField(User, blank=True)
