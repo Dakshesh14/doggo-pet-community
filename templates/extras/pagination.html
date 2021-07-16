@@ -1,0 +1,16 @@
+{% load template_helpers %}
+{% if qs.has_other_pages %}
+<nav class="my-5 d-flex justify-content-center">
+    <ul class="pagination">
+        {% for x in qs.paginator.page_range %}
+        {% if x > qs.number|add:'-5' and x < qs.number|add:'5' %}
+        {% if qs.number == x %} <li
+            class="page-item active"><a class="page-link" href="{% relative_url x 'page' request.GET.urlencode %}">{{ x }}</a></li>
+        {% else %}
+        <li class="page-item"><a class="page-link" href="{% relative_url x 'page' request.GET.urlencode %}">{{ x }}</a></li>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>
+{% endif %}

@@ -1,0 +1,77 @@
+.a-set-none {
+    color: unset;
+    text-decoration: none;
+}
+
+.a-set-none:hover {
+    color: unset;
+}
+
+.btn-custom {
+    position: relative;
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    appearance: button;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    overflow: hidden;
+    text-transform: uppercase;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -ms-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+}
+
+.btn-add-round {
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.btn-custom:hover {
+    text-decoration: none;
+    color: #353535;
+}
+
+.btn-filled {
+    border: 2px solid var(--primary-color);
+}
+
+.btn-filled::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    transform: scaleX(1);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out;
+    -ms-transition: transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+}
+
+.btn-filled:hover::after {
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+}
+
+i.active {
+    color: var(--primary-color);
+}

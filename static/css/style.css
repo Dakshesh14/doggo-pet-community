@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('navbar-styles.css');
+@import url('utility.css');
+:root {
+    --primary-color: #FB1F5B;
+    --secondary-color: #F8F32B;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8F8F8;
+}
+
+.side-bar-container {
+    background-color: #fff;
+}
+
+.search-input {
+    width: 100%;
+    position: relative;
+    display: flex;
+    background-color: #f8f8f8;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.search-input input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0.7rem;
+    width: 100%;
+    height: 100%;
+}
+
+.search-input button {
+    position: absolute;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 100%;
+    border-radius: 30px;
+    color: #353535;
+    right: 0;
+    background-color: var(--secondary-color);
+    border: none;
+    outline: none;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.side-bar-container {
+    background-color: #fff;
+}
+
+.post-card {
+    background-color: #fff;
+    position: relative;
+}
+
+.three-dot-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#three-dot {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+#three-dot~.list-group {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(1rem);
+    transition: all 0.2s ease-in-out;
+    transition-property: opacity transform;
+    -webkit-transform: translateX(1rem);
+    -moz-transform: translateX(1rem);
+    -ms-transform: translateX(1rem);
+    -o-transform: translateX(1rem);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.list-group.active {
+    opacity: 1 !important;
+    pointer-events: unset !important;
+    transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
+    -moz-transform: translateX(0) !important;
+    -ms-transform: translateX(0) !important;
+    -o-transform: translateX(0) !important;
+}

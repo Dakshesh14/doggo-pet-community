@@ -1,0 +1,18 @@
+{% extends 'layouts/layout.html' %}
+{% load static %}
+
+
+{% block title %}Post{% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'frontend/main.css' %}">
+{% endblock extra_css %}
+
+{% block extra_js %}
+<script src="{% static 'frontend/main.js' %}" defer></script>
+{% endblock extra_js %}
+
+
+{% block body %}
+<div id="root"></div>
+{% endblock body %}
